@@ -56,7 +56,7 @@ public class DataClustering {
                 System.out.printf("Iteration %d: SSE = %.6f%n", iter, sse);
 
                 // check convergence
-                if (Math.abs(prevSSE - sse) < threshold) {
+                if ((prevSSE - sse)/prevSSE < threshold) {
                     break;
                 }
                 prevSSE = sse;
